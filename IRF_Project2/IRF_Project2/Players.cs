@@ -7,7 +7,13 @@ using System.Windows.Forms;
 
 namespace IRF_Project2
 {
-    class Players : Button
+    class Players
     {
+        public string Name { get; set; }
+        public int Age { get; set; }
+        public bool Streamer { get; set; }
+        public string Nationality { get; set; }
+        public int Gender { get; set; }
+
     }
 }

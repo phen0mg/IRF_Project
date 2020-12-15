@@ -19,5 +19,6 @@ namespace IRF_Project2
         public int Age { get; set; }
         public bool Streamer { get; set; }
         public string Nationality { get; set; }
+        public short Gender { get; set; }
     }
 }
