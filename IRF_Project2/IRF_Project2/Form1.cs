@@ -12,9 +12,16 @@ namespace IRF_Project2
 {
     public partial class Form1 : Form
     {
+        AdatokEntities context = new AdatokEntities();
+        List<Table_1> adatok;
         public Form1()
         {
             InitializeComponent();
+            LoadData();
+        }
+        private void LoadData()
+        {
+            adatok = context.Table_1.ToList();
         }
     }
 }
