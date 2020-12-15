@@ -32,7 +32,7 @@ namespace IRF_Project2
                 Players p = new Players();
                 p.Name = item.Name;
                 p.Age = item.Age;
-                p.Streamer = item.Streamer;
+                p.Streamer = item.Streamer.ToString();
                 p.Nationality = item.Nationality;
                 p.Gender = item.Gender;
                 jatekosok.Add(p);

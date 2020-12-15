@@ -11,7 +11,24 @@ namespace IRF_Project2
     {
         public string Name { get; set; }
         public int Age { get; set; }
-        public bool Streamer { get; set; }
+        private string _category;
+
+        public string Streamer
+        {
+            get { return _category; }
+            set
+            {
+                if (value=="True")
+                {
+                    _category = "streamer";
+                }
+                else
+                {
+                    _category = "pro player";
+                }
+            }
+        }
+
         public string Nationality { get; set; }
         public int Gender { get; set; }
 
