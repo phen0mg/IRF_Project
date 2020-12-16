@@ -43,32 +43,35 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.SystemColors.Window;
             this.button1.Location = new System.Drawing.Point(562, 109);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(136, 112);
             this.button1.TabIndex = 0;
             this.button1.Text = "Kiírás";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.SystemColors.Window;
             this.button2.Location = new System.Drawing.Point(33, 12);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(250, 55);
             this.button2.TabIndex = 2;
             this.button2.Text = "<";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.SystemColors.Window;
             this.button3.Location = new System.Drawing.Point(461, 12);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(250, 55);
             this.button3.TabIndex = 3;
             this.button3.Text = ">";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label1
@@ -147,6 +150,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(743, 244);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
