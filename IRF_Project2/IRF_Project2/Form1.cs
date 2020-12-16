@@ -38,7 +38,6 @@ namespace IRF_Project2
                 p.Gender = (Nem)item.Gender;
                 jatekosok.Add(p);
             }
-            dataGridView1.DataSource = jatekosok;
             comboBox1.DataSource = (from x in jatekosok select x.Streamer).Distinct().ToList();
             label1.Text = hobbi[k].Name;
             label5.Text = hobbi[k].Age.ToString();
@@ -95,7 +94,6 @@ namespace IRF_Project2
         private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
         {
             hobbi = (List<Players>)(from x in jatekosok where x.Streamer == (string)comboBox1.SelectedItem select x).ToList();
-            dataGridView1.DataSource = hobbi;
         }
     }
 
