@@ -16,6 +16,7 @@ namespace IRF_Project2
         AdatokEntities context = new AdatokEntities();
         List<Table_1> adatok = new List<Table_1>();
         List<Players> jatekosok = new List<Players>();
+        List<Players> hobbi = new List<Players>();
         int k = 0;
         public Form1()
         {
@@ -34,12 +35,15 @@ namespace IRF_Project2
                 p.Age = item.Age;
                 p.Streamer = item.Streamer.ToString();
                 p.Nationality = item.Nationality;
-                p.Gender = item.Gender;
+                p.Gender = (Nem)item.Gender;
                 jatekosok.Add(p);
             }
             dataGridView1.DataSource = jatekosok;
-
-            label1.Text = jatekosok[k].Name;
+            comboBox1.DataSource = (from x in jatekosok select x.Streamer).Distinct().ToList();
+            label1.Text = hobbi[k].Name;
+            label5.Text = hobbi[k].Age.ToString();
+            label6.Text = hobbi[k].Nationality;
+            label7.Text = hobbi[k].Gender.ToString();
         }
 
 
@@ -69,17 +73,29 @@ namespace IRF_Project2
             if (k>0)
             {
                 k--;
-                label1.Text = jatekosok[k].Name;
+                label1.Text = hobbi[k].Name;
+                label5.Text = hobbi[k].Age.ToString();
+                label6.Text = hobbi[k].Nationality;
+                label7.Text = hobbi[k].Gender.ToString();
             }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (k < jatekosok.Count-1)
+            if (k < hobbi.Count-1)
             {
                 k++;
-                label1.Text = jatekosok[k].Name;
+                label1.Text = hobbi[k].Name;
+                label5.Text = hobbi[k].Age.ToString();
+                label6.Text = hobbi[k].Nationality;
+                label7.Text = hobbi[k].Gender.ToString();
             }
+        }
+
+        private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
+        {
+            hobbi = (List<Players>)(from x in jatekosok where x.Streamer == (string)comboBox1.SelectedItem select x).ToList();
+            dataGridView1.DataSource = hobbi;
         }
     }
 

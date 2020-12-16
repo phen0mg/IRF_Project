@@ -30,7 +30,22 @@ namespace IRF_Project2
         }
 
         public string Nationality { get; set; }
-        public int Gender { get; set; }
+        private Nem _gender;
+        public Nem Gender
+        {
+            get { return _gender; }
+            set
+            {
+                if (value == Nem.Male)
+                {
+                    _gender = Nem.Male;
+                }
+                else
+                {
+                    _gender = Nem.Female;
+                }
+            }
+        }
 
     }
 }

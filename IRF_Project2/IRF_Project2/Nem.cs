@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IRF_Project2
 {
-    public enum streamer
+    public enum Nem
     {
         Male = 1,
         Female = 2
