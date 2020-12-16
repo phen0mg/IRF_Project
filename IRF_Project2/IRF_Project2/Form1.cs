@@ -94,6 +94,7 @@ namespace IRF_Project2
 
         private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
         {
+            k = 0;
             hobbi = (List<Players>)(from x in jatekosok where x.Streamer == (string)comboBox1.SelectedItem select x).ToList();
         }
     }
